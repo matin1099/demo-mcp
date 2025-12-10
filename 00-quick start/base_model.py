@@ -1,9 +1,9 @@
 from langchain_openai import ChatOpenAI
 
 
-def base_model():
+def create_base_model():
     model = ChatOpenAI(
-    model="qwen3",
+    model="gpt-oss-20b",
     base_url="http://localhost:1234/v1",
     api_key="not-needed",
     timeout=10,

@@ -259,6 +259,7 @@ dependencies = [
     { name = "langchain-mcp-adapters" },
     { name = "langchain-ollama" },
     { name = "langchain-openai" },
+    { name = "requests" },
 ]
 
 [package.metadata]
@@ -268,6 +269,7 @@ requires-dist = [
     { name = "langchain-mcp-adapters" },
     { name = "langchain-ollama" },
     { name = "langchain-openai", specifier = ">=1.1.0" },
+    { name = "requests", specifier = ">=2.32.5" },
 ]
 
 [[package]]

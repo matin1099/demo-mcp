@@ -1,23 +1,17 @@
-from dataclasses import dataclass
-from langchain.tools import tool, ToolRuntime
 import requests
+from openai import api_key
 api_key = "Dwn0f2RGKABTOir+LWXttw==bjwpcCBKz0pYCVDY"
 
 
-
-@tool
 def get_weather(city:str)->dict:
-    """find city weather json"""
     if city.lower() == "tehran":
         return request(35.7219, 51.3347)
-    elif city.lower() == "tabriz":
+    if city.lower() == "tabriz":
         return request(38.0792, 46.2887)
-    elif city.lower() == "texas":
+    if city.lower() == "texas":
         return request(31.9686, 99.9018)
-    elif city.lower() == "florida":
+    if city.lower() == "florida":
         return request(27.6648, 81.5158)
-    else:
-        return "Bad City!!!!"
 
 
 def request(lat:float, lon:float, api_key=api_key):
@@ -28,14 +22,12 @@ def request(lat:float, lon:float, api_key=api_key):
         print("Error:", response.status_code, response.text)
     else:
         print(response.text)
-@dataclass
-class Context:
-    """Custom runtime context schema"""
-    user_id: str
 
 
-@tool
-def get_user_location(runtime:ToolRuntime[Context]) -> str:
-    """Retrieve user information based on user ID."""
-    user_id = runtime.context.user_id
-    return "Florida" if user_id == 1 else "SF"
+get_weather(35.7219,51.3347)
+"""
+tehran 35.7219° N, 51.3347° E
+tabriz 38.0792° N, 46.2887° E
+Texas 31.9686° N, 99.9018° W
+florida 27.6648° N, 81.5158° W
+"""
