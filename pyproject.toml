@@ -11,4 +11,11 @@ dependencies = [
 	"fastmcp",
 	"langchain-openai>=1.1.0",
 	"requests>=2.32.5",
+	"notebook>=7.5.0",
+	"beautifulsoup4>=4.14.3",
+]
+
+[tool.uv.workspace]
+members = [
+    "mcp-project",
 ]
