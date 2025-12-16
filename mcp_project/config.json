@@ -1,0 +1,34 @@
+{
+  "loguru_level": ["TRACE",
+                  "DEBUG",
+                  "INFO",
+                  "SUCCESS",
+                  "WARNING",
+                  "ERROR",
+                  "CRITICAL"]
+  ,
+  "LLM": {
+    "model": "gpt-oss-20b",
+    "temperature": 0.5,
+    "max_tokens": 500,
+    "api_key": "no_need",
+    "base_url": "http://127.0.0.1:1234/v1/",
+    "max_retries": 3
+  },
+  "Agent": {
+    "model": null,
+    "tools": null,
+    "system_prompt": null,
+    "middleware": null,
+    "response_format": null,
+    "state_schema": null,
+    "context_schema": null,
+    "checkpointer": null,
+    "store": null,
+    "interrupt_before": null,
+    "interrupt_after": null,
+    "debug": false,
+    "name":null,
+    "cache": null
+  }
+}
