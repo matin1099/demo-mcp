@@ -16,5 +16,3 @@ def load_config():
         config = json.load(f)
         log.success("config file loaded SUCCESSFULLY")
         return config
-
-
