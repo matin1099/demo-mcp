@@ -35,6 +35,14 @@
     "weather": {
       "url": "https://api.api-ninjas.com/v1/weather?lat={lat}&lon={lon}",
       "secret": "Dwn0f2RGKABTOir+LWXttw==bjwpcCBKz0pYCVDY"
+    },
+    "geocode": {
+      "url":"https://api.api-ninjas.com/v1/geocoding?city={city}",
+      "secret": "Dwn0f2RGKABTOir+LWXttw==bjwpcCBKz0pYCVDY"
+    },
+    "air_quality": {
+      "url": "https://api.api-ninjas.com/v1/airquality?lat={lat}&lon={lon}",
+      "secret": "Dwn0f2RGKABTOir+LWXttw==bjwpcCBKz0pYCVDY"
     }
   }
 }
