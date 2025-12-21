@@ -1,7 +1,7 @@
 from mcp.server.fastmcp import FastMCP
 
-from mcp_project.tools import get_air_quality
-from mcp_project.tools import get_weather
+from tools import get_air_quality
+from tools import get_weather
 
 ### need to remove for product
 # mcp_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

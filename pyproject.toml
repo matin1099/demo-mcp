@@ -1,6 +1,6 @@
 [project]
 name = "mcp-project"
-version = "0.2.0"
+version = "0.3.0"
 description = "agentic llm "
 readme = "README.md"
 requires-python = ">=3.13"

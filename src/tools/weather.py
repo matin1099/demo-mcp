@@ -1,17 +1,18 @@
 from .geocode import city_to_coords
 from typing import Any
 from loguru import logger as log
+from utils import config_manager
 from mcp.server.fastmcp import FastMCP
 import httpx
 import asyncio
 import sys, os
 
 ### need to remove for product
-mcp_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, mcp_dir)
-from utils import config_manager
-
-
+# mcp_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# sys.path.insert(0, mcp_dir)
+# from utils import config_manager
+#
+#
 ###
 
 

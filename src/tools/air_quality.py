@@ -5,14 +5,15 @@ from mcp.server.fastmcp import FastMCP
 import httpx
 import asyncio
 import sys, os
-
-### need to remove for product
-mcp_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, mcp_dir)
 from utils import config_manager
 
-
-###
+# ### need to remove for product
+# mcp_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# sys.path.insert(0, mcp_dir)
+# from utils import config_manager
+#
+#
+# ###
 
 
 async def get_air_quality(city: str) -> dict:
