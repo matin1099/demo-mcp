@@ -1,16 +1,14 @@
-from typing import Any
-from loguru import logger as log
 from mcp.server.fastmcp import FastMCP
-import httpx
-import asyncio
-import sys, os
+
+from mcp_project.tools import get_air_quality
+from mcp_project.tools import get_weather
 
 ### need to remove for product
-mcp_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, mcp_dir)
-from utils import config_manager
-from tools.weather import get_weather
-from tools.air_quality import get_air_quality
+# mcp_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# sys.path.insert(0, mcp_dir)
+# from utils import config_manager
+# from tools.weather import get_weather
+# from tools.air_quality import get_air_quality
 ###
 
 mcp = FastMCP(name='weather')

@@ -1,8 +1,0 @@
-{
-    "model_name": "gpt_oss_20b",
-    "api_key": "Not_needed_in_LMstudio",
-    "temperature": 0.5,
-    "max_token": 1000,
-    "timeout": 10,
-    "max_retries": 3
-}

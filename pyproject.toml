@@ -1,22 +1,19 @@
 [project]
-name = "demo-mcp"
+name = "mcp-project"
 version = "0.2.0"
-description = "Add your description here"
+description = "agentic llm "
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-	"langchain",
-	"langchain-ollama",
-	"langchain-mcp-adapters",
-	"fastmcp",
-	"langchain-openai>=1.1.0",
-	"requests>=2.32.5",
-	"notebook>=7.5.0",
-	"beautifulsoup4>=4.14.3",
-	"mcp[cli]>=1.22.0",
+    "beautifulsoup4>=4.14.3",
+    "fastmcp>=2.13.3",
+    "langchain>=1.1.2",
+    "langchain-mcp-adapters>=0.1.14",
+    "langchain-openai>=1.1.0",
+    "loguru>=0.7.3",
+    "httpx",
 ]
 
-[tool.uv.workspace]
-members = [
-    "mcp-project",
-]
+[build-system]
+requires = ["setuptools>=61.0", "uv"]
+build-backend = "setuptools.build_meta"
