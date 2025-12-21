@@ -4,7 +4,7 @@ from langgraph.graph.state import CompiledStateGraph
 from loguru import logger as log
 from pydantic.v1.main import ModelMetaclass
 
-from mcp_project.utils import config_manager
+from utils import config_manager
 
 config_data = config_manager.load_config()["LLM"]
 config_data['seed'] = 47

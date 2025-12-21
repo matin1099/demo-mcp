@@ -3,13 +3,6 @@ from mcp.server.fastmcp import FastMCP
 from tools import get_air_quality
 from tools import get_weather
 
-### need to remove for product
-# mcp_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# sys.path.insert(0, mcp_dir)
-# from utils import config_manager
-# from tools.weather import get_weather
-# from tools.air_quality import get_air_quality
-###
 
 mcp = FastMCP(name='weather')
 

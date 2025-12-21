@@ -1,11 +1,8 @@
-from .geocode import city_to_coords
-from typing import Any
+import httpx
 from loguru import logger as log
 from utils import config_manager
-from mcp.server.fastmcp import FastMCP
-import httpx
-import asyncio
-import sys, os
+from .geocode import city_to_coords
+
 
 ### need to remove for product
 # mcp_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,9 +34,3 @@ async def weather_request(coords: tuple, ) -> dict:
         log.success(f"response {response}")
         response.raise_for_status()
         return response.json()
-    dummy_response = {'cloud_pct': 75, 'temp': 8, 'feels_like': 6, 'humidity': 40, 'min_temp': 8, 'max_temp': 8,
-                      'wind_speed': 4.02, 'wind_degrees': 240, 'sunrise': 1765942708, 'sunset': 1765977785}
-    log.info(f"Sending DUMMY INFO")
-    final_response = {'cloud_pct': 75, 'temp': 8, 'feels_like': 6, 'humidity': 40, 'min_temp': 8, 'max_temp': 8,
-                      'wind_speed': 4.02, }
-    return final_response
