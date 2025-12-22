@@ -5,7 +5,9 @@ from langchain.agents import create_agent
 from langgraph.graph.state import CompiledStateGraph
 from loguru import logger as log
 from pydantic.v1.main import ModelMetaclass
-
+from langchain.agents.structured_output import ToolStrategy
+from utils.prompt import SYSTEM_PROMPT
+from utils.structure_format import ResponseFormat
 from utils import config_manager
 
 def agentic_model(tools=None) -> CompiledStateGraph[Any, None, Any, Any]:
@@ -14,6 +16,8 @@ def agentic_model(tools=None) -> CompiledStateGraph[Any, None, Any, Any]:
     agent_config_data = config_manager.load_config()["Agent"]
     agent_config_data["model"] = base_model
     agent_config_data["tools"] = tools
+    agent_config_data["response_format"] = ToolStrategy(ResponseFormat) # optional
+    agent_config_data["system_prompt"] = SYSTEM_PROMPT # optional
     agent_model = create_agent(**agent_config_data)
     return agent_model
 
