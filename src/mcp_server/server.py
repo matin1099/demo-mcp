@@ -4,7 +4,7 @@ from tools import get_air_quality
 from tools import get_weather
 
 
-mcp = FastMCP(name='weather')
+mcp = FastMCP(name='air_server',)
 
 
 @mcp.tool()
@@ -26,4 +26,4 @@ if __name__ == "__main__":
     # log.info("Starting server")
     # resp = asyncio.run(get_weather("TehRAn"))
     # print(resp)
-    mcp.run(transport="sse")
+    mcp.run(transport="streamable-http",)

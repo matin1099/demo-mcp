@@ -19,7 +19,6 @@
     "model": null,
     "tools": null,
     "system_prompt": null,
-    "middleware": null,
     "response_format": null,
     "state_schema": null,
     "context_schema": null,

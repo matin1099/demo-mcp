@@ -26,7 +26,7 @@ def create_base_model(config_dict: dict) -> ModelMetaclass:
 
 llm_config_data = config_manager.load_config()["LLM"]
 
-model = create_base_model(config_data)
+model = create_base_model(llm_config_data)
 respone = model.invoke("Hello there!").content
 expected_response = "Hi! 👋 How can I assist you today?"
 if respone != expected_response:
@@ -37,9 +37,10 @@ else:
 
 agent_config_data = config_manager.load_config()["Agent"]
 
-agent_config_data["model"] =model
+agent_config_data["model"] = model
+agent =  create_agent_model(**agent_config_data)
 
-respone =  model.invoke("Hello there!").content
+respone =  agent.invoke("Hello there!").content
 expected_response = "Hi! 👋 How can I assist you today?"
 if respone != expected_response:
     print("Agent model is not working properly!", respone)
