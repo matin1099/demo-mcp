@@ -27,3 +27,4 @@ if __name__ == "__main__":
     # resp = asyncio.run(get_weather("TehRAn"))
     # print(resp)
     mcp.run(transport="streamable-http",)
+    # mcp.run(transport="stdio",)

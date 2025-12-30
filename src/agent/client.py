@@ -1,6 +1,6 @@
 import asyncio
 
-from agent import  agentic_model
+from agent import agentic_model
 
 from langchain_mcp_adapters.client import  MultiServerMCPClient
 
@@ -12,12 +12,16 @@ async  def main():
     client = MultiServerMCPClient(
         {
             "air_server":{
+                # "command": "python",
+                # "args": ["/home/mat/PycharmProjects/mcp-project/src/mcp_server/server.py"],
+                # "transport":"stdio",
                 "transport":"http",
                 "url": "http://127.0.0.1:8000/mcp"
             }
         }
     )
     message_dict = {"messages": [("user", "what is weather in tehran?,also give me info about today pollution.")]}
+    # message_dict = {"messages": [("user", "differents between Farsi and japanese.")]}
 
     tools =  await client.get_tools()
     agent = agentic_model(tools)

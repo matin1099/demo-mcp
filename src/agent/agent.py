@@ -48,5 +48,5 @@ def create_base_model(config_dict: dict) -> ModelMetaclass:
 # agent = agentic_model()
 # agent_resp = agent.invoke( {"messages": [("user", "hello, world")]})
 # print(agent_resp)
-#
-#TEST OK
+
+### TEST OK
