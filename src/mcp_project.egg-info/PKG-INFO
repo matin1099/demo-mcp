@@ -12,5 +12,14 @@ Requires-Dist: langchain-openai>=1.1.0
 Requires-Dist: loguru>=0.7.3
 Requires-Dist: httpx
 Requires-Dist: langchain-ollama>=1.0.1
+Requires-Dist: notebook>=7.5.1
 
-ReWOO paradime
+Run server:
+```bash
+python src/mcp_server/server.py
+```
+
+Run code:
+```bash
+python src/
+```

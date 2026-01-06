@@ -6,3 +6,4 @@ langchain-openai>=1.1.0
 loguru>=0.7.3
 httpx
 langchain-ollama>=1.0.1
+notebook>=7.5.1

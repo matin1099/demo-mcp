@@ -2,6 +2,7 @@ from mcp.server.fastmcp import FastMCP
 
 from tools import get_air_quality
 from tools import get_weather
+from tools import random_generator
 
 
 mcp = FastMCP(name='air_server',host="127.0.0.1",port=8000)
@@ -20,7 +21,14 @@ async def air_pollution(city_name:str)-> dict:
     report = await get_air_quality(city_name)
     return report
 
-
+@mcp.tool()
+async def generate_random(kind: str = "float",
+                          a: int | float = 0,
+                          b: int | float = 1,
+                          seed: int = 1099):
+    """generate random number"""
+    random_number = await  random_generator(kind, a, b, seed)
+    return random_number
 
 if __name__ == "__main__":
 
